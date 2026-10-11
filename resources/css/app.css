@@ -13,6 +13,12 @@
     --color-paper: #f5f2ec;
 }
 
+/* Prevent Safari/iOS from substituting decorative Unicode arrows and marks with color emoji. */
+.hellios-landing [aria-hidden='true'], .studio-body [aria-hidden='true'] {
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant-emoji: text;
+}
+
 @layer base {
     html { scroll-behavior: smooth; }
     body { background-image: radial-gradient(rgb(29 30 37 / 5%) 0.6px, transparent 0.6px); background-size: 5px 5px; }
