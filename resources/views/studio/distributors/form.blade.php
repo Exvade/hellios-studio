@@ -13,5 +13,5 @@
         <label class="block"><span class="form-label">{{ __('hellios.studio.logo') }}</span><input type="file" name="logo" accept="image/png,image/jpeg,image/webp" class="form-input file:mr-4 file:border-0 file:bg-hellios-pink file:px-3 file:py-2 file:text-xs file:font-bold file:text-white">@error('logo')<span class="form-error">{{ $message }}</span>@enderror</label>
         <p class="studio-field-help">{{ __('hellios.studio.logo_help') }}</p>
     </section>
-    <div class="studio-form-actions"><button class="studio-button">{{ $editing ? __('hellios.studio.save') : __('hellios.studio.add_distributor') }} <span aria-hidden="true">↗</span></button><a href="{{ route('studio.distributors.index') }}" class="studio-button-secondary">{{ __('hellios.studio.cancel') }}</a></div>
+    <div class="studio-form-actions"><button class="studio-button">{{ $editing ? __('hellios.studio.save') : __('hellios.studio.add_distributor') }} <x-icon-arrow /></button><a href="{{ route('studio.distributors.index') }}" class="studio-button-secondary">{{ __('hellios.studio.cancel') }}</a></div>
 </form>

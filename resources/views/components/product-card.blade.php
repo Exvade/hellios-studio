@@ -10,7 +10,7 @@
             <x-landing-wheel :id="'catalog-'.$product->id" :spokes="$index && $index % 2 === 0 ? 8 : 12" />
             <span class="landing-product-placeholder">{{ __('hellios.home.photo_coming') }}</span>
         @endif
-        <span class="landing-product-arrow" aria-hidden="true">↗</span>
+        <x-icon-arrow class="landing-product-arrow"/>
     </div>
     <div class="flex items-center justify-between gap-3 pt-5"><span class="landing-eyebrow text-ink/50">{{ $product->series ?? $product->category->name.' '.__('hellios.home.collection_suffix') }}</span><span class="text-[10px] font-bold">1:64 SCALE</span></div>
     <h3>{{ $product->name }}</h3>

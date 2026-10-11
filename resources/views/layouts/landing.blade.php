@@ -36,7 +36,7 @@
 </head>
 <body class="hellios-landing">
     <a class="landing-skip" href="#main-content">{{ app()->isLocale('id') ? 'Lewati ke konten' : 'Skip to content' }}</a>
-    <div class="landing-topline"><span>{{ __('hellios.home.topline_left') }}</span><span>{{ __('hellios.home.topline_right') }} <span aria-hidden="true">↗</span></span></div>
+    <div class="landing-topline"><span>{{ __('hellios.home.topline_left') }}</span><span>{{ __('hellios.home.topline_right') }} <x-icon-arrow /></span></div>
     <header class="landing-header">
         <div class="landing-container flex items-center justify-between gap-5">
             <a href="{{ route('home') }}" aria-label="Hellios home"><x-landing-brand /></a>
@@ -52,7 +52,7 @@
                 <a href="{{ route('home') }}#collection">{{ __('hellios.nav.collection') }}</a>
                 <a href="{{ route('home') }}#story">{{ __('hellios.nav.about') }}</a>
                 <a href="{{ route('home') }}#build-guide">{{ __('hellios.nav.guide') }}</a>
-                <a class="landing-nav-cta" href="{{ route('catalog.index') }}">{{ __('hellios.nav.catalog') }} <span aria-hidden="true">↗</span></a>
+                <a class="landing-nav-cta" href="{{ route('catalog.index') }}">{{ __('hellios.nav.catalog') }} <x-icon-arrow /></a>
             </nav>
         </div>
     </header>
@@ -63,7 +63,7 @@
                 <div><a href="{{ route('home') }}" aria-label="Hellios home"><x-landing-brand /></a><p class="mt-5 max-w-xs text-sm leading-6 text-white/55">{!! __('hellios.footer.line') !!}</p></div>
                 <div class="flex flex-wrap gap-x-14 gap-y-6 text-sm">
                     <div class="flex flex-col items-start gap-3"><span class="landing-eyebrow text-white/40">{{ __('hellios.footer.explore') }}</span><a href="{{ route('catalog.index') }}">{{ __('hellios.footer.catalog') }}</a><a href="{{ route('home') }}#story">{{ __('hellios.footer.about') }}</a></div>
-                    <div class="flex flex-col items-start gap-3"><span class="landing-eyebrow text-white/40">{{ __('hellios.footer.garage') }}</span><a href="{{ route('home') }}#build-guide">{{ __('hellios.footer.guide') }}</a><a href="{{ route('studio.index') }}">{{ __('hellios.nav.studio') }} ↗</a></div>
+                    <div class="flex flex-col items-start gap-3"><span class="landing-eyebrow text-white/40">{{ __('hellios.footer.garage') }}</span><a href="{{ route('home') }}#build-guide">{{ __('hellios.footer.guide') }}</a><a href="{{ route('studio.index') }}">{{ __('hellios.nav.studio') }} <x-icon-arrow /></a></div>
                 </div>
             </div>
             <div class="flex flex-wrap justify-between gap-3 border-t border-white/15 pt-6 text-[10px] uppercase tracking-[.12em] text-white/45"><span>{{ __('hellios.footer.copyright', ['year' => date('Y')]) }}</span><span>{{ __('hellios.footer.motto') }}</span><a href="#main-content">{{ __('hellios.footer.top') }}</a></div>

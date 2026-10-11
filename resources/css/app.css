@@ -19,6 +19,9 @@
     font-variant-emoji: text;
 }
 
+.ui-icon { display: inline-block; width: .9em; height: .9em; vertical-align: -.08em; }
+.ui-icon-spark { display: inline-block; width: .9em; height: .9em; vertical-align: -.08em; }
+
 @layer base {
     html { scroll-behavior: smooth; }
     body { background-image: radial-gradient(rgb(29 30 37 / 5%) 0.6px, transparent 0.6px); background-size: 5px 5px; }

@@ -5,7 +5,7 @@
 @section('content')
     <section class="studio-page-heading">
         <div><p class="studio-kicker">03 / {{ __('hellios.home.stockists_label') }}</p><h1>{{ __('hellios.studio.distributors') }}<br><em>{{ __('hellios.studio.distributors_accent') }}</em></h1></div>
-        <div><p>{{ __('hellios.studio.distributors_help') }}</p><a href="{{ route('studio.distributors.create') }}" class="studio-button mt-5">{{ __('hellios.studio.add_distributor') }} <span aria-hidden="true">↗</span></a></div>
+        <div><p>{{ __('hellios.studio.distributors_help') }}</p><a href="{{ route('studio.distributors.create') }}" class="studio-button mt-5">{{ __('hellios.studio.add_distributor') }} <x-icon-arrow /></a></div>
     </section>
 
     <div class="studio-table-shell">

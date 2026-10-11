@@ -10,7 +10,7 @@
         </div>
         <div>
             <p>{{ __('hellios.studio.dashboard_copy') }}</p>
-            <a href="{{ route('studio.products.create') }}" class="studio-button mt-5">{{ __('hellios.studio.add_wheel') }} <span aria-hidden="true">↗</span></a>
+            <a href="{{ route('studio.products.create') }}" class="studio-button mt-5">{{ __('hellios.studio.add_wheel') }} <x-icon-arrow /></a>
         </div>
     </section>
 
@@ -25,14 +25,14 @@
         <article class="studio-latest-panel">
             <div class="studio-panel-heading">
                 <div><p class="studio-kicker">01 / {{ __('hellios.studio.inventory') }}</p><h2>{{ __('hellios.studio.latest_wheels') }}</h2></div>
-                <a href="{{ route('studio.products.index') }}">{{ __('hellios.studio.manage_products') }} <span aria-hidden="true">↗</span></a>
+                <a href="{{ route('studio.products.index') }}">{{ __('hellios.studio.manage_products') }} <x-icon-arrow /></a>
             </div>
             <div class="studio-latest-list">
                 @forelse ($latestProducts as $product)
                     <a href="{{ route('studio.products.edit', $product) }}" class="studio-latest-row">
                         <span class="studio-latest-index">{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
                         <span><strong>{{ $product->name }}</strong><small>{{ $product->category->name }}</small></span>
-                        <span aria-hidden="true">↗</span>
+                        <x-icon-arrow />
                     </a>
                 @empty
                     <div class="studio-empty-state"><p>{{ __('hellios.studio.empty_products') }}</p><a href="{{ route('studio.products.create') }}">+ {{ __('hellios.studio.add_wheel') }}</a></div>
@@ -43,8 +43,8 @@
             <p class="studio-kicker">02 / {{ __('hellios.studio.quick_actions') }}</p>
             <h2>{{ __('hellios.studio.manage_products') }}<br><em>&amp; {{ __('hellios.studio.categories') }}</em></h2>
             <div>
-                <a href="{{ route('studio.products.index') }}">{{ __('hellios.studio.manage_products') }} <span aria-hidden="true">↗</span></a>
-                <a href="{{ route('studio.categories.index') }}">{{ __('hellios.studio.manage_categories') }} <span aria-hidden="true">↗</span></a>
+                <a href="{{ route('studio.products.index') }}">{{ __('hellios.studio.manage_products') }} <x-icon-arrow /></a>
+                <a href="{{ route('studio.categories.index') }}">{{ __('hellios.studio.manage_categories') }} <x-icon-arrow /></a>
             </div>
         </aside>
     </section>
