@@ -3,6 +3,7 @@
 return [
     'meta' => [
         'description' => 'Hellios Scale Wheels. Find wheels for 1:64 die-cast builds and give every collection its own attitude.',
+        'social_image_alt' => 'HELLIOS Scale Wheels logo — small scale, big attitude.',
         'title' => 'HELLIOS Scale Wheels — Small scale. Big attitude.',
     ],
     'nav' => [

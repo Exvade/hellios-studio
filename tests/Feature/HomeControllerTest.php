@@ -68,4 +68,15 @@ class HomeControllerTest extends TestCase
             ->assertSee('OFFICIAL DISTRIBUTORS')
             ->assertSee('BIG ATTITUDE.');
     }
+
+    public function test_home_exposes_social_sharing_metadata(): void
+    {
+        $response = $this->get(route('home'));
+
+        $response->assertOk()
+            ->assertSee('property="og:title"', false)
+            ->assertSee('property="og:image" content="http://localhost:8000/images/hellios/hellios-social-card.png"', false)
+            ->assertSee('name="twitter:card" content="summary_large_image"', false)
+            ->assertSee('rel="canonical" href="http://localhost:8000"', false);
+    }
 }

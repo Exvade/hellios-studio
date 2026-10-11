@@ -1,5 +1,7 @@
 @extends('layouts.landing')
 
+@section('robots', 'noindex, nofollow')
+
 @section('title', __('hellios.studio.login_title').' — '.__('hellios.studio.title'))
 
 @section('content')

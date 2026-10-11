@@ -3,6 +3,7 @@
 return [
     'meta' => [
         'description' => 'Hellios Scale Wheels. Temukan velg untuk die-cast skala 1:64 dan beri karakter pada setiap koleksi.',
+        'social_image_alt' => 'Logo HELLIOS Scale Wheels — skala kecil, karakter besar.',
         'title' => 'HELLIOS Scale Wheels — Skala kecil. Karakter besar.',
     ],
     'nav' => [

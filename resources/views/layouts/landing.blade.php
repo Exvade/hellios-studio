@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
+    @php
+        $metaTitle = trim($__env->yieldContent('title', __('hellios.meta.title')));
+        $metaDescription = trim($__env->yieldContent('meta_description', __('hellios.meta.description')));
+        $socialImage = asset('images/hellios/hellios-social-card.png');
+        $socialLocale = app()->isLocale('id') ? 'id_ID' : 'en_US';
+    @endphp
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
     <meta name="theme-color" content="#eeedf0">
-    <meta name="description" content="{{ __('hellios.meta.description') }}">
-    <title>@yield('title', __('hellios.meta.title'))</title>
+    <meta name="description" content="{{ $metaDescription }}">
+    <meta name="robots" content="@yield('robots', 'index, follow')">
+    <link rel="canonical" href="{{ url()->current() }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="HELLIOS Scale Wheels">
+    <meta property="og:locale" content="{{ $socialLocale }}">
+    <meta property="og:title" content="{{ $metaTitle }}">
+    <meta property="og:description" content="{{ $metaDescription }}">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ $socialImage }}">
+    <meta property="og:image:secure_url" content="{{ $socialImage }}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ __('hellios.meta.social_image_alt') }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $metaTitle }}">
+    <meta name="twitter:description" content="{{ $metaDescription }}">
+    <meta name="twitter:image" content="{{ $socialImage }}">
+    <meta name="twitter:image:alt" content="{{ __('hellios.meta.social_image_alt') }}">
+    <title>{{ $metaTitle }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="hellios-landing">

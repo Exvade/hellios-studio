@@ -1,6 +1,7 @@
 @extends('layouts.landing')
 
 @section('title', __('hellios.catalog.meta_title'))
+@section('meta_description', __('hellios.catalog.archive_description'))
 
 @section('content')
     <section class="catalog-hero"><div class="landing-container"><div class="catalog-hero-meta"><span><i></i> {{ __('hellios.catalog.archive') }}</span><span>{{ __('hellios.catalog.scale_note') }}</span></div><div class="catalog-hero-grid"><div><p class="landing-eyebrow"><span class="landing-section-number">01 /</span> {{ __('hellios.catalog.label') }}</p><h1>{!! __('hellios.catalog.hero_title') !!}</h1><p class="catalog-hero-copy">{{ __('hellios.catalog.hero_copy') }}</p></div><div class="catalog-hero-art" aria-hidden="true"><span>{!! __('hellios.catalog.hero_art') !!}</span><img class="catalog-hero-wheel-pair" src="{{ asset('images/hellios/catalog-hero-wheels-cutout.png') }}" alt="" width="1536" height="1024"><p>{!! __('hellios.catalog.hero_note') !!} <b>↗</b></p></div></div></div></section>

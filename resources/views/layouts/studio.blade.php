@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
     <meta name="theme-color" content="#202126">
+    <meta name="robots" content="noindex, nofollow">
     <title>@yield('title', __('hellios.studio.title'))</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
